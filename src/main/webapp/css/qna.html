@@ -7,32 +7,170 @@
     <title>css/qna.html</title>
     <style>
         #titleSelect {
-            margin-top: 10px;
+            /* margin-top: 10px; */
             width: 90px;
             height: 30px;
             color: gray;
         }
 
         #searchText {
-            margin-top: 10px;
+            /* margin-top: 10px; */
             width: 200px;
             height: 24px;
             color: gray;
         }
+        .mainhead {
+            float: left;
+            margin-top: 5px;
+        }
+
+        .mainhead2 {
+            float: right;
+            margin-top: 5px;
+            margin-right: 15px;
+        }
+
+        #question {
+            height: 30px; 
+            color: white; 
+            background-color: rgb(163, 163, 163);
+            width: 100px;
+            height: 30px;
+            border: none;
+            border-radius: 3px;
+            font-size: 15px;
+        }
+
+        table {
+            float: left;
+            margin-top: 10px;
+            border-top: 3px solid rgb(216, 215, 215);
+            /* border-bottom: 1px solid gray; */
+        }
+
+        table, td, th {
+            border-bottom: 2px solid rgb(230, 230, 230);
+            border-collapse: collapse;
+        }
+        thead {
+            background-color: rgb(231, 228, 228);
+        }
+
+        tr {
+            height: 40px;
+        }
+
+        .pagemove {
+            float: left;
+            margin-top: 20px;
+            margin-left: 40vw;
+            font-size: 30px;
+        }
+
+        .pagemove>a {
+            text-decoration-line: none;
+            color: rgb(231, 231, 231);
+        }
+
+        .pagecon {
+            float: right;
+            margin-top: 20px;
+        }
+
+        #pagesel {
+            color: gray;
+            width: 70px;
+            height: 40px;
+        }
+        
+
+        /* td {
+            border-bottom: 1px solid gray;
+        } */
+    
     </style>
 </head>
 <body>
     <div>
-        상품 문의하기
-        <div>
+        <p style="font-size: 25px;"><b>상품 문의하기</b></p>
+        <div class="mainhead">
             <select name="title" id="titleSelect">
                 <option value="1">제목</option>
                 <option value="2">문의자</option>
                 <option value="3">등록일</option>
             </select>
             <input type="text" id="searchText">
-            <button id="searchButton">검색</button>
+            <button id="searchButton" style="height: 30px;">검색</button>
+            총 검색 결과 <b>4건</b>
         </div>
+        <div class="mainhead2">
+            <button id="question"><b>문의하기</b></button>
+            <a href="">내 문의보기</a>
+            <a href="">전체 문의보기</a>
+        </div>
+    </div>
+    <section>
+        <article>
+            <table style="margin-right: 15px;">
+                <thead>
+                    <th id="num" style="width: 5vw;">번호</th>
+                    <th id="quest" style="width: 10vw;">문의 종류</th>
+                    <th id="answer" style="width: 10vw;">답변 상태</th>
+                    <th id="titletable"style="width: 40vw;">제목</th>
+                    <th id="writer" style="width: 15vw;">문의자</th>
+                    <th id="questiondate" style="width: 15vw;">등록일</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td align="center">4</td>
+                        <td>배송</td>
+                        <td style="color: blue;" align="center">답변완료</td>
+                        <td><a href="">배송</a></td>
+                        <td>b45******</td>
+                        <td align="center">2021.10.15</td>
+                    </tr>
+                    <tr>
+                        <td align="center">3</td>
+                        <td>기타</td>
+                        <td style="color: blue;" align="center">답변완료</td>
+                        <td><a href="">기타 문의입니다.</a></td>
+                        <td>bul*****</td>
+                        <td align="center">2021.10.07</td>
+                    </tr>
+                    <tr>
+                        <td align="center">2</td>
+                        <td>상품</td>
+                        <td style="color: blue;" align="center">답변완료</td>
+                        <td><a href="">상품 문의입니다.</a></td>
+                        <td>hrh****</td>
+                        <td align="center">2021.10.06</td>
+                    </tr>
+                    <tr>
+                        <td align="center">1</td>
+                        <td>상품</td>
+                        <td style="color: blue;" align="center">답변완료</td>
+                        <td><a href="">배송</a></td>
+                        <td>dc3***</td>
+                        <td align="center"> 2021.08.29</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+    </section>
+    <div class="pagemove">
+        <a href="">≪</a>
+        <a href="">＜</a>
+        <a href="" style="color: blue;">①</a>
+        <a href="">＞</a>
+        <a href="">≫</a>
+    </div>
+    <div class="pagecon">
+        <select name="page" id="pagesel">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        <pagenumber style="margin-left: 10px;">1 Page</pagenumber>
     </div>
 </body>
 </html>
