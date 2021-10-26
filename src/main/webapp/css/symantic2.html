@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css/symantic2.html</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            border: 2px dotted black;
+            border-radius: 10px;
+            border-collapse: collapse;
+        }
+        body {
+            border: none;
+        }
+        header {
+            background-color: blanchedalmond;
+            height: 20vh;
+            border: 2px solid gray;
+            border-radius: 10px;
+            text-align: center;
+        }
+        nav {
+            background-color: greenyellow;
+            float: left;
+            width: 20%;
+            height: 50vh;
+            border: 2px solid gray;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        section {
+            background-color: greenyellow;
+            float: left;
+            width: 59%;
+            height: 50vh;
+            border: 2px solid gray;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 10px;
+            margin-left: 4px;
+        }
+
+        section>p {
+            background-color: rgb(229, 245, 206);
+            text-align: center;
+            border: 2px solid gray;
+            border-radius: 10px;
+            margin: 0 auto;
+            margin-top: 3%;
+            padding: 20px;
+        }
+        .sp1, .sp3 {
+            width: 90%;
+            height: 20%
+        }
+
+        .sp2 { 
+            width: 90%;
+            height: 30%;
+        }
+        aside {
+            background-color: greenyellow;
+            float: left;
+            width: 20%;
+            height: 50vh;
+            border: 2px solid gray;
+            border-radius: 10px auto;
+            text-align: center;
+            margin-top: 10px;
+            margin-left: 4px;
+        }
+
+        footer {
+            background-color: goldenrod;
+            float: left;
+            width: 100%;
+            height: 20vh;
+            border: 2px solid gray;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 10px;
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>&lt;header&gt;</header>
+    <nav>&lt;nav&gt;</nav>
+    <section>&lt;section&gt;
+            <p class="sp1">&lt;header&gt;</p>
+            <p class="sp2">&lt;article&gt;</p>
+            <p class="sp3">&lt;footer&gt;</p>
+    </section>
+    <aside>&lt;aside&gt;</aside>
+    <footer>&lt;footer&gt;</footer>
+</body>
+</html>

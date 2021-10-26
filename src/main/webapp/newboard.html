@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css/newboard.html</title>
+    <style>
+        html {
+            /* height: 95vh; */
+            border: 2px solid black;
+            margin: 5px 5px 5px 5px;
+        }
+        
+        
+        .boardname {
+            background-color: black;
+            color: white;
+            height: 30px;
+        }
+
+        .boardname>userinfo {
+            float: right;
+            margin-right: 10px;
+        }
+
+        .boardname>logout {
+            float: right;
+            margin-right: 10px;
+        }
+
+        .boardname>home {
+            float: right;
+            margin-right: 10px;
+        }
+
+        .Category {
+            float: left;
+        }
+
+        .Category>#name {
+            font-size: 25px;
+        }
+
+        .insertbox{
+            /* position: fixed; */
+            float: left;
+            margin-left: 10px;
+            width: 85vw;
+            border: 1px solid gray;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        #titleBox {
+            float: left;
+            width: 83vw;
+            margin-left: 10px;
+            margin-top: 15px;
+            margin-right: 10px;
+            color: gray;
+            border: 2px solid rgb(134, 109, 109);
+        }
+
+        #commonBox {
+            width: 83vw;
+            height: 70vh;
+            margin-top: 5px;
+            margin-left: 10px;
+            margin-right: 10px;
+            color: gray;
+            border: 2px solid rgb(184, 181, 181);
+        }
+
+        #send {
+            height: 30px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            color: white;
+            background-color: rgb(83, 83, 83);
+            border-radius: 5px;
+        }
+
+        .Category  [id*=cate] {
+            border: 1px solid black;
+            height: 40px;
+            margin: 0px;
+            text-align: center;
+            padding-top: 8px;
+        }
+        .Category  [id*=cate]:hover {
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="boardname">
+        <pagename>Codvang's Page</pagename>
+        <userinfo>회원정보</userinfo>
+        <logout>로그아웃</logout>
+        <home>홈</home>
+    </div>
+    <div class="Category">
+        <p id="name"><b>Category</b></p>
+        <p id = 'cate_board'>게시판</p>
+        <p id='cate_nomalboard'>일반 게시판</p>
+        <p id = 'cate_codingboard'>코딩 게시판</p>
+    </div>
+    <div class="insertbox">
+        <input type="text" id="titleBox" placeholder="제목을 입력해주세요."><p></p>
+        <textarea name="" id="commonBox" cols="30" rows="10" placeholder="내용을 입력해주세요."></textarea><p></p>
+        <button id="send">제출하기</button>
+    </div>
+</body>
+</html>
