@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript/array.html</title>
+    <style>
+        img {
+            width: 70px;
+            height: 70px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var person1 = {
+            name: '홍길동',
+            age: 20,
+            score: 80,
+            image: '2.png'
+        }
+
+        var person2 = {
+            name: '김민수',
+            age: 23,
+            score: 85, 
+            image: '5.png'
+        }
+
+        var person3 = {
+            name: '홍성민',
+            age: 25,
+            score: 88, 
+            image: '6.png'
+        }
+
+        var objAry = [person1, person2, person3];
+        document.write('<table border="1" width="350px"><tbody>');
+        document.write('<tr style="text-align:center; background-color:royalblue; color:white">');
+        document.write('<td><b>이름</b></td>');
+        document.write('<td><b>나이</b></td>');
+        document.write('<td><b>점수</b></td>');
+        document.write('<td><b>사진</b></td>');
+        document.write('</tr>');
+        for(var i = 0; i<objAry.length; i++) {
+            document.write('<tr>');
+            for(var field in objAry[i]) {
+                if(field == 'image'){
+                    document.write('<td style="text-align:center"><img src="'+ objAry[i][field] +'"></td>');
+                }else if(field == 'age' || field == 'score') {
+                    document.write(`<td style="text-align:center">${objAry[i][field]}</td>`);
+                } else {
+                    document.write(`<td style="background-color:ivory">${objAry[i][field]}</td>`);
+                }
+            }
+            document.write('</tr>');
+        }
+        document.write('</tbody></table>');
+    </script>
+</body>
+</html>

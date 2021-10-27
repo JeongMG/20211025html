@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css/transform.html</title>
+    <style>
+        .box {
+            width: 95px;
+            height: 95px;
+            line-height: 95px;
+            color: red;
+            text-align: center;
+            border-radius: 6px;
+        }
+
+        .original {
+            background-color: rgb(148, 148, 148);
+            margin: 30px;
+            border: 1px dashed gray;
+            float: left;
+        }
+
+        .child {
+            background-color: greenyellow;
+            cursor: pointer;
+        }
+
+        .translate {
+            transform: translate(10px, 20px);
+        }
+
+        .scale {
+            transform: scaleX(0.5) scaleY(1.5);
+        }
+
+        .skew:hover {
+            transform: skewX(80deg) skewY(80deg);
+        }
+
+        .rotate:hover {
+            animation-name: move;
+            animation-duration: 4s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes move {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(25deg);
+            }
+
+            50% {
+                transform: rotate(50deg);
+            }
+
+            75% {
+                transform: rotate(75deg);
+            }
+
+            100% {
+                transform: rotate(90deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="original box">
+            <div class="child box translate">translate</div>
+        </div>
+    </div>
+    <div class="original box">
+        <div class="child box scale">scale</div>
+    </div>
+    <div class="original box">
+        <div class="child box skew">skew</div>
+    </div>
+    <div class="original box">
+        <div class="child box rotate">rotate</div>
+    </div>
+</body>
+
+</html>

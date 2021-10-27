@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript/basic.html</title>
+    <script>
+        var v1 = 10; // number
+        v1 = 'hello'; //string
+        v1 = true; // boolean
+        v1 = null; // object
+        var v2; // undefined
+        v2 = 20;
+        v3 = v1 + v2 // 전역변수
+        v1 = 20;
+        var V1 = 20; // 대소문자를 구분
+        console.log(v1+V1)
+
+        v1 = {
+            name: 'hong',
+            age: 20,
+            phone: '010-2345-1212'
+        }
+
+        console.log(v1.phone);
+
+        v1 = [10, 20, 30];
+
+        console.log(v1[2]);
+
+        function sum() {
+            var n1 = 20; // 지역변수
+            var n2 = 30;
+            var n3 = n1 + n2;
+            console.log(n3);
+        }
+        // console.log(n1);
+        var v1 = 'hellp'
+        console.log(v1);
+        sum();
+        console.log(sum());
+
+        var thisYearMyAge = 20;
+
+        v1 = '"hello"';
+        console.log(v1);
+        v1 = "'hello'";
+        console.log(v1+thisYearMyAge+'세');
+
+        v1 = "20";
+        v2 = 20;
+        console.log(v1 === v2);
+        console.log(v1==v2)
+        console.log(v1 = v2);
+        v1 = "20"
+
+        // 0, null, '', => false
+        // -10, 2, 'a' => true
+        if(v1 ^ v2) {
+            console.log("같")
+        } else {
+            console.log('다르')
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
